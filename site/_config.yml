@@ -1,0 +1,10 @@
+title: AI Analytics Prompt Library
+description: A practical, copy-paste-ready prompt library for PMs and product leaders in B2B SaaS.
+baseurl: ""
+url: ""
+
+theme: minima
+
+markdown: kramdown
+
+# GitHub Pages will use this config when building the site from the `site/` folder.
