@@ -113,7 +113,7 @@ Everything here is free to use, remix, and share with your team.
 
 If this library saves you real time or becomes part of your workflow, you can send a tip:
 
-- **Venmo:** `@YOUR_VENMO`
+- **Venmo:** `@ling-zhou-3`
 
 Tips are optional. They help justify maintaining and expanding the library.
 

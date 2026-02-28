@@ -98,7 +98,7 @@ This library is free to use, remix, and share.
 
 If it saves you real time or becomes part of your team's workflow, you can send a tip:
 
-- **Venmo:** `@YOUR_VENMO`
+- **Venmo:** `@ling-zhou-3`
 
 ---
 
