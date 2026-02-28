@@ -360,6 +360,31 @@ title: AI Analytics Prompt Library
     .cta-card h2 { font-size: 2rem; margin-bottom: 12px; position: relative; }
     .cta-card p { color: var(--text-muted); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; position: relative; }
 
+    /* ── Coffee float ── */
+    .coffee-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #fdcb6e, #e17055);
+      color: #1a1d27;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(225,112,85,0.4);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .coffee-float:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(225,112,85,0.55);
+    }
+    .coffee-float svg { flex-shrink: 0; }
+
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -678,14 +703,24 @@ title: AI Analytics Prompt Library
   <div class="container">
     <div class="cta-card">
       <h2>Start using it now — it's free</h2>
-      <p>Every prompt is copy-paste ready. No signup, no paywall. If it saves you real time, tips via Venmo <strong>@ling-zhou-3</strong> are appreciated.</p>
+      <p>Every prompt is copy-paste ready. No signup, no paywall.</p>
       <div class="cta-group">
         <a href="https://github.com/lymcho/analyticslibrary/blob/main/product/prompt-library.md" class="btn btn-primary">Get the prompt library</a>
         <a href="https://github.com/lymcho/analyticslibrary" class="btn btn-secondary">Star on GitHub</a>
       </div>
+      <p style="margin-top:32px; color: var(--text-muted); font-size: 1.05rem; position: relative;">
+        If this saves you real time, buy me a coffee ☕<br>
+        <a href="https://venmo.com/ling-zhou-3" style="color: var(--orange); font-weight: 700; font-size: 1.15rem; text-decoration: none;">Venmo @ling-zhou-3</a>
+      </p>
     </div>
   </div>
 </section>
+
+<!-- ═══════════ COFFEE FLOAT ═══════════ -->
+<a href="https://venmo.com/ling-zhou-3" class="coffee-float" target="_blank" rel="noopener">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+  Buy me a coffee
+</a>
 
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
