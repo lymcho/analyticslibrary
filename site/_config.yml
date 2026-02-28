@@ -1,10 +1,8 @@
 title: AI Analytics Prompt Library
-description: A practical, copy-paste-ready prompt library for PMs and product leaders in B2B SaaS.
-baseurl: ""
-url: ""
+description: Copy-paste prompts that turn your dashboards and metrics into decisions, narratives, and experiments.
+url: "https://lymcho.github.io"
+baseurl: "/analyticslibrary"
 
 theme: minima
 
 markdown: kramdown
-
-# GitHub Pages will use this config when building the site from the `site/` folder.

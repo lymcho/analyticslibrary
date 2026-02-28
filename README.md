@@ -1,77 +1,116 @@
-# AI Analytics Prompt Library for Product Teams
+# AI Analytics Prompt Library
 
-A practical, copy‑paste‑ready prompt library for PMs and product teams working with data‑heavy products.
+**Copy-paste LLM prompts that turn your dashboards and metrics into decisions, narratives, and experiments.**
 
-- ✅ Turn raw dashboards into clear narrative insights
-- ✅ Ask better questions of your data (without being a data scientist)
-- ✅ Design AI copilots that sit on top of your existing analytics
+Product teams spend hours staring at dashboards trying to turn numbers into something useful -- a weekly summary, a root-cause explanation, an exec-ready slide. This library gives you structured prompts you can paste into ChatGPT, Claude, or any LLM along with your data, and get polished, decision-oriented output in minutes.
 
-Use it for free. If it meaningfully helps you or your team, consider sending a tip (details below).
+**Live site:** [https://lymcho.github.io/analyticslibrary](https://lymcho.github.io/analyticslibrary)
 
 ---
 
-## What This Is
+## What's in the Library
 
-This repo contains:
+The core product is [`product/prompt-library.md`](product/prompt-library.md) -- a collection of prompts organized by use case:
 
-- `product/prompt-library.md` – the full prompt library (core product)
-- `site/` – a simple GitHub Pages site (landing page) built from this library
+| Category | Use Case |
+|---|---|
+| **Weekly Metrics Review** | Paste your weekly numbers, get a prioritized summary with hypotheses and follow-ups |
+| **Root Cause Analysis** | A metric moved -- find which segments drove it and why |
+| **Experiment Analysis** | Turn A/B test results into a clear ship/iterate/kill recommendation |
+| **Scenario Planning** | Model conservative/base/upside paths for quarterly planning |
+| **Stakeholder Storytelling** | Convert raw analysis into exec summaries, emails, and slide narratives |
+| **Copilot Design** | Define and prompt user-facing analytics copilots for your product |
+| **Plug-and-Play Flows** | Drop-in rituals for weekly reviews, launch follow-ups, churn investigations |
 
-You can:
+---
 
-- Read the prompts directly in GitHub
-- Copy them into your own tools (ChatGPT, Claude, internal LLMs)
-- Share the GitHub Pages link with your team
+## Quick Example
+
+Here's how the **weekly metrics review** prompt works in practice.
+
+**You paste this into your LLM:**
+
+> You are an experienced product and analytics partner. I will paste the last 4-8 weeks of key product metrics.
+>
+> 1. Identify the top 3-5 movements this week, ranked by impact.
+> 2. For each, explain possible causes using only the data I provide.
+> 3. Flag noisy vs. meaningful signals.
+> 4. Suggest 3-5 follow-up questions.
+>
+> **Product:** B2B project management tool
+> **Known events:** Launched new onboarding flow in Week 4
+>
+> | Metric | W1 | W2 | W3 | W4 | W5 | W6 |
+> |---|---|---|---|---|---|---|
+> | Signups | 1,200 | 1,180 | 1,210 | 1,350 | 1,420 | 1,390 |
+> | Activation (7d) | 34% | 33% | 35% | 41% | 43% | 42% |
+> | WAU | 8,500 | 8,400 | 8,550 | 8,900 | 9,100 | 9,050 |
+
+**The LLM returns** a structured summary: activation jumped +8pp after the onboarding launch and held, signups are up 15% but the cause is ambiguous, and here are 5 specific follow-up questions to validate each hypothesis. Ready to paste into your weekly doc.
+
+Every prompt in the library works this way: you bring the data, the prompt gives the LLM the right structure and role, and you get back something you can actually use.
 
 ---
 
 ## How to Use
 
-1. Open [`product/prompt-library.md`](product/prompt-library.md).
-2. Find the section that matches your use case (weekly review, experiment analysis, etc.).
-3. Copy a prompt, plug in your specifics (metrics, context, goals), and run it in your LLM of choice.
+1. Open [`product/prompt-library.md`](product/prompt-library.md)
+2. Find the section that matches your task
+3. Copy the prompt into your LLM
+4. Fill in the bracketed placeholders with your own context, metrics, and data
+5. Run it and iterate
 
-This library is designed for **B2B product teams** who:
-
-- Have metrics / dashboards
-- Need to get to *"so what?"* quickly
-- Want to make AI do the heavy lifting on analysis and storytelling
+Each prompt tells the LLM what role to play, what structure to follow, and what output format to use. You customize by plugging in your product context.
 
 ---
 
-## Support / "Pay What You Want"
+## Repo Structure
 
-If this library saves you hours of work, helps you ship a feature, or becomes part of your team’s workflow, you can support it:
-
-- Venmo: `@YOUR_VENMO`
-- Patreon: `https://patreon.com/YOUR_HANDLE`
-
-You can use everything here for free. Tips are completely optional but very appreciated.
+```
+analyticslibrary/
+├── product/
+│   ├── prompt-library.md    ← The full prompt library (core product)
+│   └── CHANGELOG.md         ← Version history
+├── site/
+│   ├── index.md             ← GitHub Pages landing page
+│   └── _config.yml          ← Jekyll config
+├── .github/
+│   └── workflows/
+│       └── pages.yml        ← GitHub Pages deployment
+└── README.md                ← You are here
+```
 
 ---
 
-## GitHub Pages Site
+## Landing Page
 
-This repo is set up so you can host a simple landing page using GitHub Pages.
+The `site/` folder contains a Jekyll-based landing page deployed to GitHub Pages at:
 
-Once you’ve pushed this repo to GitHub:
+**[https://lymcho.github.io/analyticslibrary](https://lymcho.github.io/analyticslibrary)**
 
-1. Go to **Settings → Pages**
-2. Under **Build and deployment**, choose:
-   - **Source:** Deploy from a branch
-   - **Branch:** `main` (or `master`) / `/root`
-3. Save.
+It provides a friendlier introduction to the library with examples, and links back to the full prompt library on GitHub.
 
-GitHub will build a site from the `site/` folder using the configuration in `site/_config.yml`.
+---
 
-The site will show:
+## Support / Pay What You Want
 
-- A clean landing page
-- A link to view the prompt library
-- Your Venmo / Patreon tip links
+This library is free to use, remix, and share.
+
+If it saves you real time or becomes part of your team's workflow, you can send a tip:
+
+- **Venmo:** `@YOUR_VENMO`
+
+---
+
+## Contributing
+
+Ideas for new prompts? Found something that could be better?
+
+- [Open an issue](https://github.com/lymcho/analyticslibrary/issues)
+- Submit a pull request
 
 ---
 
 ## Changelog
 
-See [`product/CHANGELOG.md`](product/CHANGELOG.md) for updates and new sections as the library evolves.
+See [`product/CHANGELOG.md`](product/CHANGELOG.md) for version history.
